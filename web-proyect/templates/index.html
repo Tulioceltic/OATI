@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales</title>
+</head>
+    <body>
+        <div>
+            {%for i in videos%}
+                <h2>{{i[0]}}</h2>    
+                <iframe width="560" height="315" src={{i[1]}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="wrapper" ><a class="link2" href="{{url_for('mostrarmas',id=i[2])}}"><span><span>Ver mas</span></span></a></div>
+            {%endfor%}
+        </div>
+        <a href="{{url_for('formAgreVi')}}" class="button is-success">Agregar</a>
+    </body>

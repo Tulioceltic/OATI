@@ -1,0 +1,12 @@
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="is-size-3">Agregar Comentario</h3>
+            <form action="{{url_for('guardarComentario',id=idv)}}" method="post">
+                <label for="descripcion">Descripción</label>
+                <input required type="text" class="input" placeholder="Descripción" name="descripcion" id="descripcion">
+                <button type="submit" class="button is-success mt-2">Guardar</button>
+            </form>
+        </div>
+    </div>
+</section>
